@@ -1,0 +1,12 @@
+urls:
+  cognito:    # cognito root auth url
+
+endpoints:
+  authorize: ${urls.cognito}/oauth2/authorize?response_type=code&client_id=${cognito.client}&redirect_uri=${cognito.callback}
+  token: ${urls.cognito}/oauth2/token
+
+cognito:
+  client:     # cognito client id
+  secret:     # cognito client secret
+  callback:   # valid callback url set in cognito
+  keys:       # url for cognito jwt keys
